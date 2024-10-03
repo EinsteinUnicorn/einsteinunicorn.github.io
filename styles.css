@@ -1,0 +1,196 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    color: #9d00ff; /* Classic hacker green */
+    line-height: 1.6;
+}
+
+/* Text and Links */
+h1, h2, h3 {
+    color: #9d00ff;
+    text-shadow: 0px 0px 10px #9d00ff;
+}
+
+a {
+    color: #9d00ff;
+    text-decoration: none;
+    border-bottom: 1px dashed #9d00ff;
+}
+
+a:hover {
+    text-shadow: 0px 0px 10px #9d00ff;
+}
+
+/* Header */
+header {
+    background-color: black;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 2px solid #9d00ff;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+/* Carousel styles */
+.carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+    border: 1px solid #9d00ff;
+}
+
+.carousel-slide {
+    display: none;
+    text-align: center;
+    padding: 20px;
+}
+
+.rotate-image {
+    width: 80%;
+    max-width: 400px;
+    transition: transform 0.5s;
+    border: 2px solid #9d00ff;
+}
+
+.rotate-image:hover {
+    transform: rotate(360deg);
+}
+
+.carousel-prev, .carousel-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #9d00ff;
+    color: black;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    font-size: 20px;
+}
+
+.carousel-prev {
+    left: 10px;
+}
+
+.carousel-next {
+    right: 10px;
+}
+
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Ensure no scrollbars appear outside the modal */
+
+}
+
+.modal-content {
+    background-color: black;
+    padding: 20px;
+    border: 2px solid #9d00ff;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 500px;
+    max-height: 80vh; /* Make sure modal content doesn't exceed viewport height */
+    overflow-y: auto; /* Add vertical scroll bar when content overflows */
+    color: #9d00ff;
+}
+
+.close {
+    float: right;
+    font-size: 20px;
+    cursor: pointer;
+    color: #9d00ff;
+}
+
+/* Scrollbar styling */
+.modal-content::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar */
+}
+
+.modal-content::-webkit-scrollbar-thumb {
+    background-color: #9d00ff; /* Neon green thumb */
+    /*//border-radius: 10px;  Rounded corners for the thumb */
+    border: 2px solid black; /* Border around the thumb for a retro look */
+}
+
+.modal-content::-webkit-scrollbar-track {
+    background-color: black; /* Background of the scrollbar track */
+    border: 1px solid /*; /* Thin green border around the scrollbar track */
+}
+
+/* For Firefox (using scrollbar-color and scrollbar-width) */
+.modal-content {
+    scrollbar-width: thin; /* Thin scrollbar for Firefox */
+    scrollbar-color: #9d00ff black; /* Green thumb and black track */
+}
+
+img{
+    width: 500px;
+    
+}
+
+/* Contact Form */
+form {
+    background-color: black;
+    padding: 20px;
+    border: 2px solid #9d00ff;
+}
+
+input, textarea {
+    background-color: black;
+    color: #9d00ff;
+    border: 1px solid #9d00ff;
+    padding: 10px;
+    width: 100%;
+    margin-bottom: 10px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button {
+    background-color: black;
+    color: #9d00ff;
+    padding: 10px;
+    border: 1px solid #9d00ff;
+    cursor: pointer;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+button:hover {
+    background-color: #9d00ff;
+    color: black;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: black;
+    border-top: 2px solid #9d00ff;
+    color: #9d00ff;
+}

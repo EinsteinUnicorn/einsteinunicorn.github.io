@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Becky Button</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Becky Button</h1>
+        <!-- 
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        -->
+    </header>
+
+    <section id="home">
+        <h2>Welcome to My Portfolio</h2>
+        <p>Hi, I'm Becky Button. I'm a maker and a graduate of the Electrical and Computer Engineering program at Carnegie Mellon University.
+            I have over 10 years of experience building projects with microncontrollers, 3D printers and various other emerging technologies. 
+            Like many other people, I enjoy doing things that are both fun to do, and sometimes useful for other people. 
+            So far that that venture has taken me to the world of small scale manufacturing, assistive technology, semiconductor fabrication, musical 
+            effects and probably a few other things I'm forgetting. Please check out some of my projects below, and if you would like to connect, please 
+            reach out to me at beckybutton@proton.me. I'm always looking for opportunities to collaborate and help others on projects. 
+    </section>
+
+    <!-- 
+    <section id="about">
+        <h2>About Me</h2>
+        <p>[Add a brief biography about yourself, your skills, background, and interests.]</p>
+    </section>
+    -->
+
+    <section id="projects">
+        <h2>My Projects</h2>
+
+        <!-- Carousel container -->
+        <div class="carousel-container">
+            <div class="carousel-slide" id="slide2">
+                <h3>Purple Pedal Project</h3>
+                <img src="Assembled_pedal.jpg" alt="Assembled Pedal (Credit Jason Garwood)" onclick="openModal('modal2')">
+                <p> Developed a reprogrammable digital effects pedal and curriculum in collaboration with Pittsburgh Sound Preserve, Carnegie Mellon, Jason Garwood and Rowan Dunlop. Photo Credit: Jason Garwood</p>
+            </div>
+            <div class="carousel-slide" id="slide1">
+                <h3>HackerFab</h3>
+                <img src="20230420_205435.jpg"  alt="Trace" onclick="openModal('modal1')">
+                <p>I worked in the HackerFab, the first open source Semiconductor fab built at Carnegie Mellon. My work was focused on 
+                    electrical characterization of our process, and characterization of the thin film on the chips. 
+                </p>
+            </div>
+            
+
+            <div class="carousel-slide" id="slide3">
+                <h3>Twinkle Toes</h3>
+                <img src="Pedal.jpeg" alt="Project 3 Image" onclick="openModal('modal3')">
+                <p> Developed a new take on reprogrammable effects pedal in collaboration with PAS Berlin, XHain, and Winny Li. </p>
+            </div>
+            <div class="carousel-slide" id="slide4">
+                <h3>DigiBraille</h3>
+                <img src="DigiBraille.png" alt="DigiBraille" onclick="openModal('modal4')">
+                <p> Developed a web connected Braille Embosser in a Team with Joshna Iyengar, Zeynep Ozkaya and user study participants at the Library of Accessible Media in Pittsburgh. </p>
+            </div>
+
+            <div class="carousel-slide" id="slide5">
+                <h3>Bioprinting Research</h3>
+                <img src="Screenshot 2024-09-30 at 5.04.41 PM.png" alt="Showing a Prosthetic to Megan Smith" onclick="openModal('modal')">
+                <p> Developed the Bioprinting process at Virginia Tech based on Jordan Miller's bioprinting work. Learned various biological material protocols + methods, and learned to image using the confocal machine.</p>
+            </div>
+
+            <div class="carousel-slide" id="slide6">
+                <h3>WiFi Deauthing Sandals</h3>
+                <img src="sandals.jpeg" alt="sandals" onclick="openModal('modal6')">
+                <p> Created a pair of wifi deauthing sandals with Naomi Wu. </p>
+            </div>
+
+            <div class="carousel-slide" id="slide7">
+                <h3>Maker Movement and 3D Printing Advocacy</h3>
+                <img src="DSC04554.JPG" alt="congressional makerfaire" onclick="openModal('modal')">
+                <p> Went to events, lead workshops, presented at panels, and wrote op-eds advocating for Maker Education, 3D printing, and democratizing access to these things to more people </p>
+            </div>
+
+            <div class="carousel-slide" id="slide8">
+                <h3>Bioinformatics Research</h3>
+                <img src="Need_More_Classifiers_V2.JPG" alt="Showing a Prosthetic to Megan Smith" onclick="openModal('modal')">
+                <p> Developed an machine learning method to track cells as they went through growth phases. Created a database of transcriptomics and phenotype data. Work was publised in a journal. </p>
+            </div>
+
+            <div class="carousel-slide" id="slide9">
+                <h3>E-Nable - 3D printing & designing Prosthetics</h3>
+                <img src="Screenshot 2024-09-30 at 4.32.47 PM.png" alt="Showing a Prosthetic to Chief Technology Officer" onclick="openModal('modal')">
+                <p> Active member of the E-Nable community. Developed a myoelectric prosthetic that utilized a cheaper sensor that worked well for those with amniotic band syndrome that still had a functional elbow. </p>
+            </div>
+
+            <!-- Add more slides for all 10 projects -->
+
+            <!-- Navigation buttons -->
+            <button class="carousel-prev" onclick="moveSlide(-1)">❮</button>
+            <button class="carousel-next" onclick="moveSlide(1)">❯</button>
+        </div>
+
+        <!-- Modals for each project -->
+        <div id="modal1" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal1')">&times;</span>
+                <h3>HackerFab Details</h3>
+                <p>During my time at the HackerFab, I worked to go through pieces of the process, which included
+                    testing our Spin On Glass process, testing the electrical properties of the traces, and using
+                    spectroscopy methods to determine how thick the spin on glass was. I designed 3D printed spectrometer 
+                    mounts for both the microscope and the plasma etcher.
+                </p>
+                <img src="microscope_mount.jpeg"  alt="Microscope Mount">
+                <img src="IMG_9645.jpeg"  alt="Plasma Etcher Mount">
+
+            </div>
+        </div>
+
+        <div id="modal2" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal2')">&times;</span>
+                <h3>Purple Pedal Details</h3>
+                <p>Developed a low-cost reprogrammable effects pedal to bring to Pittsburgh's Open Improv Lab. 
+                    Lead workshops at NYC Resistor, Coney Island Maker Faire, Hackaday Supercon, and Hackaday Berlin. PCBway, and FlashPCB generously donated PCBS for workshops. 
+                The pedal was designed in collaboration with Jason Garwood, who designed the enclosure and educational materials.  </p>
+            </div>
+        </div>
+
+        <div id="modal3" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal3')">&times;</span>
+                <h3>Twinkle Toes Details</h3>
+                <p>While doing a residency at Petersburg Art Space Berlin, I developed a foot shaped effects pedal. 
+                    Winny Li developed the graphic design for the pedal. I had several workshops across Germany, included at the FSCK hacker camp
+                and with people I met at Superbooth. Aisler sponsored the PCB's for the workshops.</p>
+            </div>
+        </div>
+        <div id="modal4" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal4')">&times;</span>
+                <h3>DigiBraille Details</h3>
+                <p> I designed the mechanical parts of our webconnected braille embosser. 
+                    Did a focus group with blind users to verify the design was actually useful for the people we intended to use it.
+                    Added textures on the surfaces to ensure peole would know how to orient the paper. 
+                </p>
+                <img src="IMG_0252 2 Background Removed.jpeg"  alt="Top View">
+            </div>
+        </div>
+
+        <div id="modal6" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal('modal6')">&times;</span>
+                <h3>WiFi Deauth Sandals Details</h3>
+                <p> As more and more devices were getting connected to the internet, I thought it was important to 
+                    make sure people knew to update their endpoints for security purposes. This was a fun way to show 
+                    how not doing so was suseptible to security exploits. I publi
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 Becky Button. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
